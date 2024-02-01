@@ -6,11 +6,11 @@
 #    By: wchen <wchen@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/14 20:12:56 by wchen             #+#    #+#              #
-#    Updated: 2024/01/27 21:34:28 by wchen            ###   ########.fr        #
+#    Updated: 2024/02/01 19:49:09 by wchen            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  Clap-Trap
+NAME =  Diamond-Trap
 
 # COMPILE FLAGS
 CXX			= c++

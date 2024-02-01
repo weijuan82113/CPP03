@@ -11,9 +11,9 @@ class Scavtrap : public virtual Claptrap
 		~Scavtrap();
 		void attack(const std::string& target);
 		void guardGate();
-		const static int& getHit();
-		const static int& getEnergy();
-		const static int& getDamage();
+		const int& getHit();
+		const int& getEnergy();
+		const int& getDamage();
 
 	private:
 		const static int scavHit = 100;

@@ -18,15 +18,15 @@ void Flagtrap::highFiveGuys(void)
 
 const int& Flagtrap::getHit()
 {
-	return (Claptrap::_hitPoint);
+	return (this->_hitPoint);
 }
 
 const int& Flagtrap::getEnergy()
 {
-	return (Claptrap::_energyPoint);
+	return (this->_energyPoint);
 }
 
 const int& Flagtrap::getDamage()
 {
-	return (Claptrap::_attackDamage);
+	return (this->_attackDamage);
 }

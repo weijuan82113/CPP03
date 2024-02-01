@@ -26,4 +26,8 @@ int main()
 	flag.highFiveGuys();
 	std::cout << "----Diamondtrap----" << std::endl;
 	Diamondtrap diamond("the diamond");
+	diamond.showStatus();
+	diamond.attack("enemy");
+	diamond.highFiveGuys();
+
 }

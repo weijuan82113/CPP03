@@ -37,9 +37,9 @@ const int& Claptrap::getAttackDamage()
 
 void Claptrap::attack(const std::string& target)
 {
-	std::cout << "ClapTrap <" << this->getName()
+	std::cout << "ClapTrap <" << getName()
 	<< "> attacks <" << target
-	<< "> causing <"  << this->getAttackDamage()
+	<< "> causing <"  << getAttackDamage()
 	<< "> points of damage!" << std::endl;
 	this->_energyPoint -= 1;
 	Claptrap(target).takeDamage(getAttackDamage());

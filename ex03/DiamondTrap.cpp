@@ -1,8 +1,13 @@
 #include "DiamondTrap.hpp"
 
 Diamondtrap::Diamondtrap(std::string name)
-	: Claptrap(name + "_clap_name"), Scavtrap(name), Flagtrap(name)
+	: Claptrap(name + "_clap_name"),
+	Scavtrap(name),
+	Flagtrap(name)
 {
+	this->_hitPoint = Flagtrap::getHit();
+	this->_energyPoint = Scavtrap::getEnergy();
+	this->_attackDamage = Flagtrap::getDamage();
 	std::cout << name << "<Diamond>constructor" << std::endl;
 }
 

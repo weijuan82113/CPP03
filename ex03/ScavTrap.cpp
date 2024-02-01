@@ -28,15 +28,15 @@ void Scavtrap::guardGate()
 
 const int& Scavtrap::getHit()
 {
-	return (scavHit);
+	return (this->_hitPoint);
 }
 
 const int& Scavtrap::getEnergy()
 {
-	return (scavEnergy);
+	return (this->_energyPoint);
 }
 
 const int& Scavtrap::getDamage()
 {
-	return (scavDamage);
+	return (this->_attackDamage);
 }
