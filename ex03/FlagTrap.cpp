@@ -1,7 +1,7 @@
 #include "FlagTrap.hpp"
 
-Flagtrap::Flagtrap(std::string name, int flagHit, int flagEnergy, int flagDamage)
-	: Claptrap::Claptrap(name + "_flag_clap_name", flagHit, flagEnergy, flagDamage)
+Flagtrap::Flagtrap(std::string name)
+	: Claptrap(name)
 {
 	std::cout << this->_name << " : <Flag>constructor" << std::endl;
 }

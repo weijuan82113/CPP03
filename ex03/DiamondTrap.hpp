@@ -8,10 +8,7 @@
 class Diamondtrap: public Scavtrap, public Flagtrap
 {
 	public:
-		Diamondtrap(std::string name,
-				int hit = Flagtrap::getHit(),
-				int energy = Scavtrap::getEnergy(),
-				int damage = Flagtrap::getDamage());
+		Diamondtrap(std::string name);
 		void attack(const std::string& target);
 		void whoAmI();
 		void name();

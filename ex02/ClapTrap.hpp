@@ -7,9 +7,8 @@
 class Claptrap
 {
 	public:
-		Claptrap(std::string name, int hit = clapHit, int energy = clapEnergy, int damage = clapDamage);
-		// Claptrap(std::string name, int hit = 0, int energy = 0, int damage = 0);
-		~Claptrap();
+		Claptrap(std::string name);
+		virtual ~Claptrap();
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);

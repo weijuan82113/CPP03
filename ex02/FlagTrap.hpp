@@ -6,7 +6,7 @@
 class Flagtrap: public Claptrap
 {
 	public:
-		Flagtrap(std::string name, int hit = flagHit, int energy = flagEnergy, int damage = flagDamage);
+		Flagtrap(std::string name);
 		~Flagtrap();
 		void highFiveGuys(void);
 

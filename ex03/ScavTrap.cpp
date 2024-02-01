@@ -1,7 +1,7 @@
 #include "ScavTrap.hpp"
 
-Scavtrap::Scavtrap(std::string name, int scavHit, int scavEnergy, int scavDamage)
- : Claptrap::Claptrap(name + "_scav_clap_name", scavHit, scavEnergy, scavDamage)
+Scavtrap::Scavtrap(std::string name)
+		: Claptrap(name)
 {
 	std::cout << this->_name << " : <Scav>constructor" << std::endl;
 }

@@ -19,16 +19,17 @@ int main()
 	std::cout << "----Claptrap----" << std::endl;
 	Claptrap clap("chen");
 	clap.showStatus();
-	clap.attack("emnemy");
+	clap.attack("enemy");
 	clap.showStatus();
 	clap.beRepaired(10);
 	clap.showStatus();
 	clap.takeDamage(10);
 	std::cout << "----Scavtrap----" << std::endl;
-	Claptrap scav = Scavtrap("wei");
-	scav.showStatus();
-	scav.attack("emnemy");
-	scav.showStatus();
+	Claptrap *scav = new Scavtrap("wei");
+	scav->showStatus();
+	scav->attack("enemy");
+	scav->showStatus();
+	delete (scav);
 	//scav.guardGate();
 
 }

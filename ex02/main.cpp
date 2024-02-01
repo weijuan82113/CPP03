@@ -27,11 +27,13 @@ int main()
 	clap.showStatus();
 	clap.takeDamage(10);
 	std::cout << "----Scavtrap----" << std::endl;
-	Scavtrap scav("the Scav");
-	scav.showStatus();
-	scav.attack("emnemy");
+	Claptrap *scav = new Scavtrap("the Scav");
+	scav->showStatus();
+	scav->attack("emnemy");
 	std::cout << "----Flagtrap----" << std::endl;
-	Flagtrap flag("the Flag");
-	flag.showStatus();
-	flag.attack("emnemy");
+	Flagtrap *flag = new Flagtrap("the Flag");
+	flag->showStatus();
+	flag->attack("emnemy");
+	delete(scav);
+	delete(flag);
 }

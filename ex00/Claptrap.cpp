@@ -2,9 +2,9 @@
 
 Claptrap::Claptrap(std::string name):
 _name(name),
-_hitPoint(hit),
-_energyPoint(energy),
-_attackDamage(damage)
+_hitPoint(Claptrap::hit),
+_energyPoint(Claptrap::energy),
+_attackDamage(Claptrap::damage)
 {
 	std::cout << this->_name << " : constructor" << std::endl;
 }
@@ -41,7 +41,7 @@ void Claptrap::attack(const std::string& target)
 	<< "> causing <"  << this->getAttackDamage()
 	<< "> points of damage!" << std::endl;
 	this->_energyPoint -= 1;
-	Claptrap(target).takeDamage(getAttackDamage());
+	Claptrap(target).takeDamage(this->getAttackDamage());
 }
 
 void Claptrap::takeDamage(unsigned int amount)

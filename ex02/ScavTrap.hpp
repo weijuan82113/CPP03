@@ -7,7 +7,7 @@
 class Scavtrap : public Claptrap
 {
 	public:
-		Scavtrap(std::string name, int hit = scavHit, int energy = scavEnergy, int damage = scavDamage);
+		Scavtrap(std::string name);
 		~Scavtrap();
 		void attack(const std::string& target);
 		void guardGate();

@@ -1,10 +1,10 @@
 #include "ClapTrap.hpp"
 
-Claptrap::Claptrap(std::string name, int clapHit, int clapEnergy, int clapDamage):
+Claptrap::Claptrap(std::string name):
 _name(name),
-_hitPoint(clapHit),
-_energyPoint(clapEnergy),
-_attackDamage(clapDamage)
+_hitPoint(Claptrap::clapHit),
+_energyPoint(Claptrap::clapEnergy),
+_attackDamage(Claptrap::clapDamage)
 {
 	std::cout << this->_name << " : <Clap>constructor" << std::endl;
 }
