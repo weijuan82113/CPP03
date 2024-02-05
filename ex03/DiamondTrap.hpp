@@ -11,7 +11,6 @@ class Diamondtrap: public Scavtrap, public Flagtrap
 		Diamondtrap(std::string name);
 		void attack(const std::string& target);
 		void whoAmI();
-		void name();
 	private:
 		std::string _name;
 };

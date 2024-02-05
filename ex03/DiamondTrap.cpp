@@ -5,9 +5,10 @@ Diamondtrap::Diamondtrap(std::string name)
 	Scavtrap(name),
 	Flagtrap(name)
 {
-	this->_hitPoint = Flagtrap::getHit();
-	this->_energyPoint = Scavtrap::getEnergy();
-	this->_attackDamage = Flagtrap::getDamage();
+	this -> _name = name;
+	this->_hitPoint = Flagtrap::flagHit;
+	this->_energyPoint = Scavtrap::scavEnergy;
+	this->_attackDamage = Flagtrap::flagDamage;
 	std::cout << name << "<Diamond>constructor" << std::endl;
 }
 
@@ -19,10 +20,6 @@ void Diamondtrap::attack(const std::string& target)
 void Diamondtrap::whoAmI()
 {
 	std::cout << "the diamond name is " << this->_name << std::endl;
-	std::cout << "the clap name is " << this->_name << std::endl;
+	std::cout << "the clap name is " << this->Claptrap::_name << std::endl;
 }
 
-void Diamondtrap::name()
-{
-	std::cout << "---<Diammo>---" << std::endl;
-}

@@ -9,11 +9,8 @@ class Flagtrap: public virtual Claptrap
 		Flagtrap(std::string name);
 		~Flagtrap();
 		void highFiveGuys(void);
-		const int& getHit();
-		const int& getEnergy();
-		const int& getDamage();
 
-	private:
+	protected:
 		const static int flagHit = 100;
 		const static int flagEnergy = 100;
 		const static int flagDamage = 30;
