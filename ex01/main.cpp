@@ -1,16 +1,3 @@
-// #include "ClapTrap.hpp"
-
-// int main()
-// {
-// 	Claptrap clap("wei");
-// 	clap.showStatus();
-// 	clap.attack("juan");
-// 	clap.showStatus();
-// 	clap.beRepaired(10);
-// 	clap.showStatus();
-// 	clap.takeDamage(10);
-// }
-
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
@@ -19,17 +6,33 @@ int main()
 	std::cout << "----Claptrap----" << std::endl;
 	Claptrap clap("chen");
 	clap.showStatus();
-	clap.attack("enemy");
+	clap.attack("clap_enemy");
+	clap.showStatus();
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
+	clap.attack("clap_enemy");
 	clap.showStatus();
 	clap.beRepaired(10);
-	clap.showStatus();
 	clap.takeDamage(10);
 	std::cout << "----Scavtrap----" << std::endl;
 	Claptrap *scav = new Scavtrap("wei");
 	scav->showStatus();
-	scav->attack("enemy");
+	scav->attack("scav_enemy");
 	scav->showStatus();
+	//scav->guardGate();
 	delete (scav);
-	//scav.guardGate();
+	std::cout << "----robot----" << std::endl;
+	Scavtrap robot = Scavtrap("robot");
+	robot.showStatus();
+	robot.attack("robot_enemy");
+	robot.guardGate();
+	robot.showStatus();
 
 }

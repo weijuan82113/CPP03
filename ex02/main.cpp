@@ -1,16 +1,3 @@
-// #include "ClapTrap.hpp"
-
-// int main()
-// {
-// 	Claptrap clap("wei");
-// 	clap.showStatus();
-// 	clap.attack("juan");
-// 	clap.showStatus();
-// 	clap.beRepaired(10);
-// 	clap.showStatus();
-// 	clap.takeDamage(10);
-// }
-
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FlagTrap.hpp"
@@ -21,19 +8,22 @@ int main()
 	std::cout << "----Claptrap----" << std::endl;
 	Claptrap clap("the clap");
 	clap.showStatus();
-	clap.attack("emnemy");
-	clap.showStatus();
+	clap.attack("enemy");
 	clap.beRepaired(10);
 	clap.showStatus();
 	clap.takeDamage(10);
 	std::cout << "----Scavtrap----" << std::endl;
-	Claptrap *scav = new Scavtrap("the Scav");
+	Scavtrap *scav = new Scavtrap("the Scav");
 	scav->showStatus();
-	scav->attack("emnemy");
+	scav->attack("enemy");
+	scav->showStatus();
+	scav->guardGate();
 	std::cout << "----Flagtrap----" << std::endl;
 	Flagtrap *flag = new Flagtrap("the Flag");
 	flag->showStatus();
-	flag->attack("emnemy");
+	flag->attack("enemy");
+	flag->showStatus();
+	flag->highFiveGuys();
 	delete(scav);
 	delete(flag);
 }

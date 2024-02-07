@@ -8,7 +8,7 @@ class Flagtrap: public Claptrap
 	public:
 		Flagtrap(std::string name);
 		~Flagtrap();
-		void highFiveGuys(void);
+		void highFiveGuys();
 
 	private:
 		const static int flagHit = 100;

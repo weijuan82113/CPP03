@@ -6,11 +6,11 @@
 #    By: wchen <wchen@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/14 20:12:56 by wchen             #+#    #+#              #
-#    Updated: 2024/01/27 18:23:43 by wchen            ###   ########.fr        #
+#    Updated: 2024/02/04 14:06:52 by wchen            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  Clap-Trap
+NAME =  Flag-Trap
 
 # COMPILE FLAGS
 CXX			= c++

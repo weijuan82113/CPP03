@@ -14,17 +14,7 @@ Scavtrap::~Scavtrap()
 	std::cout << this->_name << " : <Scav>destructor" << std::endl;
 }
 
-void Scavtrap::attack(const std::string& target)
-{
-	std::cout << "ScavTrap <" << this->getName()
-	<< "> attacks <" << target
-	<< "> causing <"  << this->getAttackDamage()
-	<< "> points of damage!" << std::endl;
-	this->_energyPoint -= 1;
-	Claptrap(target).takeDamage(getAttackDamage());
-}
-
 void Scavtrap::guardGate()
 {
-	std::cout << "ScavTrap is in Gate kepper mode" << std::endl;
+	std::cout << "ScavTrap is in Gate keeper mode" << std::endl;
 }

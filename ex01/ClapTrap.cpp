@@ -36,25 +36,41 @@ const int& Claptrap::getAttackDamage()
 
 void Claptrap::attack(const std::string& target)
 {
-	std::cout << "ClapTrap <" << this->getName()
-	<< "> attacks <" << target
-	<< "> causing <"  << this->getAttackDamage()
-	<< "> points of damage!" << std::endl;
-	this->_energyPoint -= 1;
-	Claptrap(target).takeDamage(getAttackDamage());
+	if (this->_energyPoint - 1 >= 0 && _hitPoint > 0 && _hitPoint < UINT_MAX)
+	{
+		this->_energyPoint -= 1;
+		std::cout << "ClapTrap " << this->getName()
+		<< " attacks " << target
+		<< " causing "  << this->getAttackDamage()
+		<< " points of damage!" << std::endl;
+		Claptrap(target).takeDamage(getAttackDamage());
+	}
+	else
+	{
+		std::cout << "The engergy is exhausted" << std::endl;
+	}
 }
 
-void Claptrap::takeDamage(unsigned int amount)
+void Claptrap::
+takeDamage(unsigned int amount)
 {
 	this->_hitPoint -= amount;
+	std::cout <<"---show status after attacking" << std::endl;
 	this->showStatus();
 }
 
 void Claptrap::beRepaired(unsigned int amount)
 {
-	std::cout << getName() << " is repaired by " << amount << std::endl;
-	this->_hitPoint += amount;
-	this->_energyPoint -= 1;
+	if (this->_energyPoint - 1 >= 0 && _hitPoint > 0)
+	{
+		this->_energyPoint -= 1;
+		std::cout << getName() << " is repaired by " << amount << std::endl;
+		this->_hitPoint += amount;
+	}
+	else
+	{
+		std::cout << "The engergy is exhausted" << std::endl;
+	}
 }
 
 void Claptrap::showStatus(void)
