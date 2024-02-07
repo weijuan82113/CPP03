@@ -14,6 +14,19 @@ Flagtrap::~Flagtrap()
 	std::cout << this->_name << " : <Flag>destructor" << std::endl;
 }
 
+Flagtrap& Flagtrap::operator=(const Flagtrap& other)
+{
+	if (this != &other)
+	{
+		std::cout << "<Flagtrap> Copy assignment operator called" << std::endl;
+		_name = other._name;
+		_hitPoint = other._hitPoint;
+		_energyPoint = other._energyPoint;
+		_attackDamage = other._attackDamage;
+	}
+	return *this;
+}
+
 void Flagtrap::highFiveGuys(void)
 {
 	std::cout << "Give me high five!!!" << std::endl;

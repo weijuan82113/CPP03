@@ -6,33 +6,26 @@
 int main()
 {
 	std::cout << "----Claptrap----" << std::endl;
-	Claptrap clap("the clap");
-	clap.showStatus();
-	clap.attack("enemy");
-	clap.showStatus();
-	clap.beRepaired(10);
-	clap.showStatus();
-	clap.takeDamage(10);
-	std::cout << "----Scavtrap----" << std::endl;
-	Scavtrap scav("the Scav");
-	scav.showStatus();
-	scav.attack("enemy");
-	scav.guardGate();
-	std::cout << "----Flagtrap----" << std::endl;
-	Flagtrap flag("the Flag");
-	flag.showStatus();
-	flag.attack("enemy");
-	flag.highFiveGuys();
+	Claptrap *clap = new Diamondtrap("the clap");
+	clap->showStatus();
+	clap->attack("scav_enemy");
+	clap->showStatus();
+	delete(clap);
 	std::cout << "----Diamondtrap----" << std::endl;
 	Diamondtrap diamond("the diamond");
-	diamond.showStatus();
-	diamond.attack("enemy");
-	diamond.showStatus();
 	diamond.highFiveGuys();
+	diamond.guardGate();
+	diamond.showStatus();
+	diamond.attack("diamond_enemy");
+	diamond.takeDamage(30);
+	diamond.showStatus();
 	diamond.whoAmI();
-	std::cout << "----new Diamondtrap----" << std::endl;
-	Claptrap* newClap = new Diamondtrap("newDiamond");
-	newClap->showStatus();
-	newClap->attack("new enemy");
-	delete(newClap);
+	std::cout << "----Diamondtrap Copy----" << std::endl;
+	Diamondtrap copyScav1(diamond);
+	copyScav1.showStatus();
+	Diamondtrap copyScav2("the copy 2");
+	copyScav2.showStatus();
+	copyScav1 = copyScav2;
+	copyScav1.showStatus();
+
 }

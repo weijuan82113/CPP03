@@ -4,35 +4,24 @@
 int main()
 {
 	std::cout << "----Claptrap----" << std::endl;
-	Claptrap clap("chen");
-	clap.showStatus();
-	clap.attack("clap_enemy");
-	clap.showStatus();
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.attack("clap_enemy");
-	clap.showStatus();
-	clap.beRepaired(10);
-	clap.takeDamage(10);
+	Claptrap *clap = new Scavtrap("wei");
+	clap->showStatus();
+	clap->attack("scav_enemy");
+	clap->showStatus();
+	delete (clap);
 	std::cout << "----Scavtrap----" << std::endl;
-	Claptrap *scav = new Scavtrap("wei");
-	scav->showStatus();
-	scav->attack("scav_enemy");
-	scav->showStatus();
-	//scav->guardGate();
-	delete (scav);
-	std::cout << "----robot----" << std::endl;
-	Scavtrap robot = Scavtrap("robot");
-	robot.showStatus();
-	robot.attack("robot_enemy");
-	robot.guardGate();
-	robot.showStatus();
-
+	Scavtrap scav("robot");
+	scav.guardGate();
+	scav.showStatus();
+	scav.attack("robot_enemy");
+	scav.guardGate();
+	scav.showStatus();
+	scav.takeDamage(20);
+	std::cout << "----Scavtrap Copy----" << std::endl;
+	Scavtrap copyScav1(scav);
+	copyScav1.showStatus();
+	Scavtrap copyScav2("the copy 2");
+	copyScav2.showStatus();
+	copyScav1 = copyScav2;
+	copyScav1.showStatus();
 }

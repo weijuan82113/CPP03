@@ -2,12 +2,15 @@
  #define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
+#include <string>
 
 class Scavtrap : public virtual Claptrap
 {
 	public:
 		Scavtrap(std::string name);
 		~Scavtrap();
+		Scavtrap& operator=(const Scavtrap& other);
+		void attack(const std::string &target);
 		void guardGate();
 
 	protected:
@@ -15,6 +18,8 @@ class Scavtrap : public virtual Claptrap
 		const static int scavEnergy = 50;
 		const static int scavDamage = 20;
 
+	private:
+		Scavtrap();
 
 };
 #endif

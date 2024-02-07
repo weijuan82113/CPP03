@@ -9,9 +9,12 @@ class Diamondtrap: public Scavtrap, public Flagtrap
 {
 	public:
 		Diamondtrap(std::string name);
+		~Diamondtrap();
+		Diamondtrap& operator=(const Diamondtrap& other);
 		void attack(const std::string& target);
 		void whoAmI();
 	private:
+		Diamondtrap();
 		std::string _name;
 };
 

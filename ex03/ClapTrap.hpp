@@ -9,10 +9,12 @@ class Claptrap
 	public:
 		Claptrap(std::string name);
 		virtual ~Claptrap();
+		Claptrap(const Claptrap& copyClass);
+		Claptrap& operator=(const Claptrap& other);
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		void showStatus(void);
+		void showStatus();
 		const std::string& getName();
 		const int& getHitPoint();
 		const int& getEnergyPoint();
@@ -25,6 +27,7 @@ class Claptrap
 		int _attackDamage;
 
 	private:
+		Claptrap();
 		const static int clapHit = 10;
 		const static int clapEnergy = 10;
 		const static int clapDamage = 0;

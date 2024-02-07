@@ -12,6 +12,24 @@ Diamondtrap::Diamondtrap(std::string name)
 	std::cout << name << "<Diamond>constructor" << std::endl;
 }
 
+Diamondtrap::~Diamondtrap()
+{
+	std::cout << this->_name << " : <Diamond>destructor" << std::endl;
+}
+
+Diamondtrap& Diamondtrap::operator=(const Diamondtrap& other)
+{
+	if (this != &other)
+	{
+		std::cout << "<Diamond> Copy assignment operator called" << std::endl;
+		_name = other._name;
+		_hitPoint = other._hitPoint;
+		_energyPoint = other._energyPoint;
+		_attackDamage = other._attackDamage;
+	}
+	return *this;
+}
+
 void Diamondtrap::attack(const std::string& target)
 {
 	Scavtrap::attack(target);
