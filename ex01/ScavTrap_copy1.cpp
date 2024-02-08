@@ -1,9 +1,5 @@
 #include "ScavTrap.hpp"
 
-const int Scavtrap::scavHit;
-const int Scavtrap::scavEnergy;
-const int Scavtrap::scavDamage;
-
 Scavtrap::Scavtrap(std::string name)
  : Claptrap(name)
 {
@@ -16,12 +12,6 @@ Scavtrap::Scavtrap(std::string name)
 Scavtrap::~Scavtrap()
 {
 	std::cout << this->_name << " : <Scav>destructor" << std::endl;
-}
-
-Scavtrap::Scavtrap(const Scavtrap& copyClass):Claptrap(copyClass)
-{
-	std::cout << "<Scavtrap> Copy constructor called" << std::endl;
-	*this = copyClass;
 }
 
 Scavtrap& Scavtrap::operator=(const Scavtrap& other)

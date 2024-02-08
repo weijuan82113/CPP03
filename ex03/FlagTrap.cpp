@@ -18,6 +18,12 @@ Flagtrap::~Flagtrap()
 	std::cout << this->_name << " : <Flag>destructor" << std::endl;
 }
 
+Flagtrap::Flagtrap(const Flagtrap& copyClass):Claptrap(copyClass)
+{
+	std::cout << "<Flagtrap> Copy constructor called" << std::endl;
+	*this = copyClass;
+}
+
 Flagtrap& Flagtrap::operator=(const Flagtrap& other)
 {
 	if (this != &other)

@@ -8,6 +8,7 @@ class Flagtrap: public virtual Claptrap
 	public:
 		Flagtrap(std::string name);
 		~Flagtrap();
+		Flagtrap(const Flagtrap& copyClass);
 		Flagtrap& operator=(const Flagtrap& other);
 		void highFiveGuys();
 

@@ -14,6 +14,12 @@ Scavtrap::~Scavtrap()
 	std::cout << this->_name << " : <Scav>destructor" << std::endl;
 }
 
+Scavtrap::Scavtrap(const Scavtrap& copyClass):Claptrap(copyClass)
+{
+	std::cout << "<Scavtrap> Copy constructor called" << std::endl;
+	*this = copyClass;
+}
+
 Scavtrap& Scavtrap::operator=(const Scavtrap& other)
 {
 	if (this != &other)
