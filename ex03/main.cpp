@@ -18,7 +18,6 @@ int main()
 	diamond.showStatus();
 	diamond.attack("diamond_enemy");
 	diamond.takeDamage(30);
-	diamond.showStatus();
 	diamond.whoAmI();
 	std::cout << "----Diamondtrap Copy----" << std::endl;
 	Diamondtrap copyScav1(diamond);

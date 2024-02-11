@@ -9,12 +9,18 @@ Diamondtrap::Diamondtrap(std::string name)
 	this->_hitPoint = Flagtrap::flagHit;
 	this->_energyPoint = Scavtrap::scavEnergy;
 	this->_attackDamage = Flagtrap::flagDamage;
-	std::cout << name << "<Diamond>constructor" << std::endl;
+	std::cout << name << " : <Diamond>constructor" << std::endl;
 }
 
 Diamondtrap::~Diamondtrap()
 {
 	std::cout << this->_name << " : <Diamond>destructor" << std::endl;
+}
+
+Diamondtrap::Diamondtrap(const Diamondtrap& copyClass):Claptrap(copyClass),Scavtrap(copyClass),Flagtrap(copyClass)
+{
+	std::cout << "<Diamond> Copy constructor called" << std::endl;
+	*this = copyClass;
 }
 
 Diamondtrap& Diamondtrap::operator=(const Diamondtrap& other)

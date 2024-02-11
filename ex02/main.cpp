@@ -18,7 +18,6 @@ int main()
 	flag.attack("flag_enemy");
 	flag.highFiveGuys();
 	flag.takeDamage(20);
-	flag.showStatus();
 	std::cout << "----Flagtrap Copy----" << std::endl;
 	Flagtrap copyScav1(flag);
 	copyScav1.showStatus();
