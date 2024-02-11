@@ -4,33 +4,33 @@
 #include <string>
 #include <iostream>
 
-class Claptrap
+class ClapTrap
 {
 	public:
-		Claptrap(std::string name);
-		virtual ~Claptrap();
-		Claptrap(const Claptrap& copyClass);
-		Claptrap& operator=(const Claptrap& other);
-		void attack(const std::string& target);
+		ClapTrap(std::string name);
+		virtual ~ClapTrap();
+		ClapTrap(const ClapTrap& copyClass);
+		ClapTrap& operator=(const ClapTrap& other);
+		virtual void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		void showStatus();
 		const std::string& getName();
-		const int& getHitPoint();
-		const int& getEnergyPoint();
-		const int& getAttackDamage();
+		const unsigned int& getHitPoint();
+		const unsigned int& getEnergyPoint();
+		const unsigned int& getAttackDamage();
 
 	protected:
 		std::string	_name;
-		int _hitPoint;
-		int _energyPoint;
-		int _attackDamage;
+		unsigned int _hitPoint;
+		unsigned int _energyPoint;
+		unsigned int _attackDamage;
 
 	private:
-		Claptrap();
-		const static int clapHit = 10;
-		const static int clapEnergy = 10;
-		const static int clapDamage = 0;
+		ClapTrap();
+		const static unsigned int clapHit = 10;
+		const static unsigned int clapEnergy = 10;
+		const static unsigned int clapDamage = 0;
 };
 
 #endif

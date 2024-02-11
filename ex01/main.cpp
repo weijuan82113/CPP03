@@ -4,13 +4,13 @@
 int main()
 {
 	std::cout << "----Claptrap----" << std::endl;
-	Claptrap *clap = new Scavtrap("wei");
+	ClapTrap *clap = new ScavTrap("wei");
 	clap->showStatus();
 	clap->attack("scav_enemy");
 	clap->showStatus();
 	delete (clap);
 	std::cout << "----Scavtrap----" << std::endl;
-	Scavtrap scav("robot");
+	ScavTrap scav("robot");
 	scav.guardGate();
 	scav.showStatus();
 	scav.attack("robot_enemy");
@@ -18,9 +18,9 @@ int main()
 	scav.showStatus();
 	scav.takeDamage(20);
 	std::cout << "----Scavtrap Copy----" << std::endl;
-	Scavtrap copyScav1(scav);
+	ScavTrap copyScav1(scav);
 	copyScav1.showStatus();
-	Scavtrap copyScav2("the copy 2");
+	ScavTrap copyScav2("the copy 2");
 	copyScav2.showStatus();
 	copyScav1 = copyScav2;
 	copyScav1.showStatus();

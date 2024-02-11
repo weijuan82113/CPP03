@@ -1,48 +1,45 @@
 #include "ScavTrap.hpp"
 
-Scavtrap::Scavtrap(std::string name)
- : Claptrap(name)
+ScavTrap::ScavTrap(std::string name)
+ : ClapTrap(name)
 {
-	this->_hitPoint = Scavtrap::scavHit;
-	this->_energyPoint = Scavtrap::scavEnergy;
-	this->_attackDamage = Scavtrap::scavDamage;
+	this->_hitPoint = ScavTrap::scavHit;
+	this->_energyPoint = ScavTrap::scavEnergy;
+	this->_attackDamage = ScavTrap::scavDamage;
 	std::cout << this->_name << " : <Scav>constructor" << std::endl;
 }
 
-Scavtrap::~Scavtrap()
+ScavTrap::~ScavTrap()
 {
 	std::cout << this->_name << " : <Scav>destructor" << std::endl;
 }
 
-Scavtrap::Scavtrap(const Scavtrap& copyClass):Claptrap(copyClass)
+ScavTrap::ScavTrap(const ScavTrap& copyClass):ClapTrap(copyClass)
 {
-	std::cout << "<Scavtrap> Copy constructor called" << std::endl;
+	std::cout << "<ScavTrap> Copy constructor called" << std::endl;
 	*this = copyClass;
 }
 
-Scavtrap& Scavtrap::operator=(const Scavtrap& other)
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
 	if (this != &other)
 	{
-		std::cout << "<Scavtrap> Copy assignment operator called" << std::endl;
-		_name = other._name;
-		_hitPoint = other._hitPoint;
-		_energyPoint = other._energyPoint;
-		_attackDamage = other._attackDamage;
+		std::cout << "<ScavTrap> Copy assignment operator called" << std::endl;
+		ClapTrap::operator=(other);
 	}
 	return *this;
 }
 
-void Scavtrap::attack(const std::string &target)
+void ScavTrap::attack(const std::string &target)
 {
-	if (this->_energyPoint - 1 >= 0 && _hitPoint > 0)
+	if (this->_energyPoint >= 1 && _hitPoint > 0)
 	{
 		this->_energyPoint -= 1;
 		std::cout << "ScavTrap " << this->getName()
 		<< " attacks " << target
 		<< " causing "  << this->getAttackDamage()
 		<< " points of damage!" << std::endl;
-		Claptrap(target).takeDamage(getAttackDamage());
+		ClapTrap(target).takeDamage(getAttackDamage());
 	}
 	else
 	{
@@ -50,7 +47,7 @@ void Scavtrap::attack(const std::string &target)
 	}
 }
 
-void Scavtrap::guardGate()
+void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap is in Gate keeper mode" << std::endl;
 }

@@ -2,23 +2,22 @@
  #define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
-#include <string>
 
-class Scavtrap : public Claptrap
+class ScavTrap : public ClapTrap
 {
 	public:
-		Scavtrap(std::string name);
-		~Scavtrap();
-		Scavtrap(const Scavtrap& copyClass);
-		Scavtrap& operator=(const Scavtrap& other);
+		ScavTrap(std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap& copyClass);
+		ScavTrap& operator=(const ScavTrap& other);
 		void attack(const std::string &target);
 		void guardGate();
 
 	private:
-		Scavtrap();
-		const static int scavHit = 100;
-		const static int scavEnergy = 50;
-		const static int scavDamage = 20;
+		ScavTrap();
+		const static unsigned int scavHit = 100;
+		const static unsigned int scavEnergy = 50;
+		const static unsigned int scavDamage = 20;
 
 };
 #endif

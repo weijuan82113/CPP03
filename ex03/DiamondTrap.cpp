@@ -1,49 +1,47 @@
 #include "DiamondTrap.hpp"
 
-Diamondtrap::Diamondtrap(std::string name)
-	: Claptrap(name + "_clap_name"),
-	Scavtrap(name),
-	Flagtrap(name)
+DiamondTrap::DiamondTrap(std::string name)
+	: ClapTrap(name + "_clap_name"),
+	ScavTrap(name),
+	FlagTrap(name)
 {
 	this -> _name = name;
-	this->_hitPoint = Flagtrap::flagHit;
-	this->_energyPoint = Scavtrap::scavEnergy;
-	this->_attackDamage = Flagtrap::flagDamage;
+	this->_hitPoint = FlagTrap::flagHit;
+	this->_energyPoint = ScavTrap::scavEnergy;
+	this->_attackDamage = FlagTrap::flagDamage;
 	std::cout << name << " : <Diamond>constructor" << std::endl;
 }
 
-Diamondtrap::~Diamondtrap()
+DiamondTrap::~DiamondTrap()
 {
 	std::cout << this->_name << " : <Diamond>destructor" << std::endl;
 }
 
-Diamondtrap::Diamondtrap(const Diamondtrap& copyClass):Claptrap(copyClass),Scavtrap(copyClass),Flagtrap(copyClass)
+DiamondTrap::DiamondTrap(const DiamondTrap& copyClass):ClapTrap(copyClass),ScavTrap(copyClass),FlagTrap(copyClass)
 {
 	std::cout << "<Diamond> Copy constructor called" << std::endl;
 	*this = copyClass;
 }
 
-Diamondtrap& Diamondtrap::operator=(const Diamondtrap& other)
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 {
 	if (this != &other)
 	{
 		std::cout << "<Diamond> Copy assignment operator called" << std::endl;
 		_name = other._name;
-		_hitPoint = other._hitPoint;
-		_energyPoint = other._energyPoint;
-		_attackDamage = other._attackDamage;
+		ClapTrap::operator=(other);
 	}
 	return *this;
 }
 
-void Diamondtrap::attack(const std::string& target)
+void DiamondTrap::attack(const std::string& target)
 {
-	Scavtrap::attack(target);
+	ScavTrap::attack(target);
 }
 
-void Diamondtrap::whoAmI()
+void DiamondTrap::whoAmI()
 {
 	std::cout << "the diamond name is " << this->_name << std::endl;
-	std::cout << "the clap name is " << this->Claptrap::_name << std::endl;
+	std::cout << "the clap name is " << this->ClapTrap::_name << std::endl;
 }
 

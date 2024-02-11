@@ -3,20 +3,20 @@
 
 #include "ClapTrap.hpp"
 
-class Flagtrap: public Claptrap
+class FlagTrap: public ClapTrap
 {
 	public:
-		Flagtrap(std::string name);
-		~Flagtrap();
-		Flagtrap(const Flagtrap& copyClass);
-		Flagtrap& operator=(const Flagtrap& other);
+		FlagTrap(std::string name);
+		~FlagTrap();
+		FlagTrap(const FlagTrap& copyClass);
+		FlagTrap& operator=(const FlagTrap& other);
 		void highFiveGuys();
 
 	private:
-		Flagtrap();
-		const static int flagHit = 100;
-		const static int flagEnergy = 100;
-		const static int flagDamage = 30;
+		FlagTrap();
+		const static unsigned int flagHit = 100;
+		const static unsigned int flagEnergy = 100;
+		const static unsigned int flagDamage = 30;
 };
 
 #endif

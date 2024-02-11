@@ -1,8 +1,9 @@
 #include "ClapTrap.hpp"
+#include <limits>
 
 int main()
 {
-	Claptrap clap("wei");
+	ClapTrap clap("wei");
 	clap.showStatus();
 	clap.attack("juan");
 	clap.attack("juan");
@@ -16,15 +17,16 @@ int main()
 	clap.attack("juan");
 	clap.showStatus();
 	clap.attack("juan");
+	//clap.takeDamage(std::numeric_limits<unsigned int>::max());
 	clap.takeDamage(20);
 	clap.takeDamage(10);
 	clap.beRepaired(10);
 	clap.showStatus();
 	clap.takeDamage(10);
 	clap.showStatus();
-	Claptrap copyone(clap);
+	ClapTrap copyone(clap);
 	copyone.showStatus();
-	Claptrap newone("the new");
+	ClapTrap newone("the new");
 	clap = newone;
 	clap.showStatus();
 
