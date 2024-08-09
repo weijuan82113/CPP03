@@ -20,7 +20,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(const ScavTrap& copyClass):ClapTrap(copyClass)
 {
-	std::cout << "<ScavTrap> Copy constructor called" << std::endl;
+	std::cout << "<ScavTrap> Copy constructor is called" << std::endl;
 	*this = copyClass;
 }
 
@@ -28,7 +28,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
 	if (this != &other)
 	{
-		std::cout << "<ScavTrap> Copy assignment operator called" << std::endl;
+		std::cout << "<ScavTrap> Copy assignment operator is called" << std::endl;
 		ClapTrap::operator=(other);
 	}
 	return *this;

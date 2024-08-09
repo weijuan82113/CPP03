@@ -29,8 +29,4 @@ int main()
 	ClapTrap newone("the new");
 	clap = newone;
 	clap.showStatus();
-
-
-
-
 }

@@ -33,22 +33,22 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 	return *this;
 }
 
-const std::string& ClapTrap::getName()
+const std::string& ClapTrap::getName() const
 {
 	return (this->_name);
 }
 
-const unsigned int& ClapTrap::getHitPoint()
+const unsigned int& ClapTrap::getHitPoint() const
 {
 	return (this->_hitPoint);
 }
 
-const unsigned int& ClapTrap::getEnergyPoint()
+const unsigned int& ClapTrap::getEnergyPoint() const
 {
 	return (this->_energyPoint);
 }
 
-const unsigned int& ClapTrap::getAttackDamage()
+const unsigned int& ClapTrap::getAttackDamage() const
 {
 	return (this->_attackDamage);
 }
@@ -81,7 +81,7 @@ void ClapTrap::showStatus(void)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hitPoint == 0)
-		std::cout << "---the enemy's HitPoint is already died--" << std::endl;
+		std::cout << "---the enemy's HitPoint is zero, the ememy is already died--" << std::endl;
 	else if (amount >= _hitPoint)
 		_hitPoint = 0;
 	else

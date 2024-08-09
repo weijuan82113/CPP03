@@ -2,7 +2,7 @@
 
 DiamondTrap::DiamondTrap(std::string name)
 	: ClapTrap(name + "_clap_name"),
-	ScavTrap(name),
+	ScavTrap(name), //途中のクラスのconstructorが上書きしない→virtual継承指定いるので、結局同じbaseのconstructorを参照している
 	FlagTrap(name)
 {
 	this -> _name = name;

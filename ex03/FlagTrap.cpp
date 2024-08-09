@@ -20,7 +20,7 @@ FlagTrap::~FlagTrap()
 
 FlagTrap::FlagTrap(const FlagTrap& copyClass):ClapTrap(copyClass)
 {
-	std::cout << "<FlagTrap> Copy constructor called" << std::endl;
+	std::cout << "<FlagTrap> Copy constructor is called" << std::endl;
 	*this = copyClass;
 }
 
@@ -28,7 +28,7 @@ FlagTrap& FlagTrap::operator=(const FlagTrap& other)
 {
 	if (this != &other)
 	{
-		std::cout << "<FlagTrap> Copy assignment operator called" << std::endl;
+		std::cout << "<FlagTrap> Copy assignment operator is called" << std::endl;
 		ClapTrap::operator=(other);
 	}
 	return *this;

@@ -6,11 +6,11 @@
 #    By: wchen <wchen@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/14 20:12:56 by wchen             #+#    #+#              #
-#    Updated: 2024/02/04 14:07:06 by wchen            ###   ########.fr        #
+#    Updated: 2024/07/12 19:10:34 by wchen            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  Scav-Trap
+NAME = Scav-Trap
 
 # COMPILE FLAGS
 CXX			= c++

@@ -4,7 +4,7 @@
 int main()
 {
 	std::cout << "----Claptrap----" << std::endl;
-	ClapTrap *clap = new ScavTrap("wei");
+	ClapTrap *clap = new ScavTrap("wei");//upcastingコピーコンストラクターと関係ない
 	clap->showStatus();
 	clap->attack("scav_enemy");
 	clap->showStatus();
@@ -24,4 +24,5 @@ int main()
 	copyScav2.showStatus();
 	copyScav1 = copyScav2;
 	copyScav1.showStatus();
+	//system("leaks -q Scav-Trap 1>&2");
 }

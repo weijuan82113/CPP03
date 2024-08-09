@@ -26,5 +26,5 @@ int main()
 	copyScav2.showStatus();
 	copyScav1 = copyScav2;
 	copyScav1.showStatus();
-
+	//system("leaks -q Diamond-Trap 1>&2");
 }
